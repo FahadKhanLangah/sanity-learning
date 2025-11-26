@@ -17,6 +17,12 @@ export default defineType({
       options: { source: 'title' }
     }),
     defineField({
+      name: 'summary',
+      title: 'Project Summary',
+      type: 'text',
+      rows: 4
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',
@@ -26,7 +32,7 @@ export default defineType({
       name: 'technologies',
       title: 'Technologies Used',
       type: 'array',
-      of: [{type: 'string'}], // e.g. ["React", "Node.js", "Tailwind"]
+      of: [{ type: 'string' }], // e.g. ["React", "Node.js", "Tailwind"]
       options: {
         layout: 'tags' // Makes the UI look like clickable tags
       }
@@ -37,7 +43,7 @@ export default defineType({
       title: 'Related Service',
       description: 'Which service category does this project belong to?',
       type: 'reference',
-      to: [{type: 'service'}] // This must match the 'name' in your service.ts
+      to: [{ type: 'service' }] // This must match the 'name' in your service.ts
     }),
     defineField({
       name: 'liveUrl',
