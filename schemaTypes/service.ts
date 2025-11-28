@@ -15,9 +15,9 @@ export default defineType({
     defineField({
       name: 'slug',
       title: 'Slug',
-      type: 'slug',     // A URL-friendly ID (e.g., /services/web-development)
+      type: 'slug',    
       options: {
-        source: 'title', // Auto-generates from the title field
+        source: 'title', 
         maxLength: 96,
       },
     }),
